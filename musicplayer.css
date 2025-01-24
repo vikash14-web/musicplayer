@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .Content {
+    background-color: #DFCCFB; /* Normal background color */
+    color: #000000;           /* Normal text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Dark Mode for General Body */
+.darkMode {
+    background-color: #1D2B53; /* Dark Blue Background */
+    color: #F3F8FF; /* Light Text Color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode for Song Cards */
+.darkMode #allSongs, .darkMode #songCard ,.darkMode #playList{
+    background-color: #2A3A6A; /* Medium Blue for song cards */
+    color: #F3F8FF; /* Light Text */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode for Individual Song Card (Card 1) */
+.darkMode #songCard-1 {
+    background-color: #1D2B53; /* Dark Blue for Song Card 1 */
+    color: #F3F8FF; /* Light Text for Song Card 1 */
+    border: 2px solid #23355D; /* Optional border for contrast */
+}
+
+/* Hover Effects for Interactive Song Card */
+.darkMode #songCard-1:hover {
+    background-color: #23355D; /* Lighter shade on hover for visibility */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* Image inside Song Card */
+.darkMode #songCard-1 img {
+    border-radius: 10px; /* Rounded corners for image */
+    border: 2px solid #F3F8FF; /* Light border for contrast */
+}
+
+/* Dark Mode for Audio Player */
+.darkMode #songCard-2 {
+    background-color: #23355D; /* Lighter blue for audio player section */
+    border: 2px solid #1D2B53; /* Darker border */
+}
+.darkMode #preBtn,.darkMode #nextBtn ,.darkMode #addplaybtn{
+    background-color: #1D2B53;
+    color: #F3F8FF;
+}
+.darkMode #addplaybtn:hover{
+    background-color: #23355D;
+}
+
+
+#title-1{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 20px;
+}
+#title-1 h1{
+  margin: 0 auto;
+  text-align: center;
+  flex:1;
+}
+.form-check{
+    margin-left: auto;
+}
+
+
+/*cardSection*/
+#playerSection{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    
+}
+#allSongs,#songCard{
+    background-color: #F2D9FB ;
+}
+
+#songCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: flex-start;
+    gap: 20px; /* Space between sections */
+    width: 50%; /* 1/2 of the laptop screen */
+    max-width: 600px; /* Maximum width for larger screens */
+    min-width: 400px; /* Minimum width to maintain a reasonable size on smaller screens */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #F2D9FB; /* Light lavender background */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for pop-out effect */
+    margin: 0 auto; /* Centering the card horizontally */
+}
+
+#songCard-1 {
+    position: relative;
+    background-color: #DFCCFB; /* Light lavender */
+    border: 2px solid #F2D9FB; /* Soft pinkish lavender border */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#songCard-1 img {
+    width: 100%; /* Makes the image fill the available width of songCard-1 */
+    height: 250px; /* Increased fixed height */
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#card-content h4,
+#card-content p {
+    margin: 5px 0;
+     /* Darker text color for contrast */
+}
+
+#songCard-2 {
+    width: 100%; /* Full width of songCard */
+    padding: 10px;
+    text-align: center;
+    background-color: #F0E1FF; /* Slightly darker background for contrast */
+    border-radius: 12px;
+    border: 2px solid #E1C6FB; /* Soft border to match theme */
+}
+
+#audioTrack {
+    width: 100%; /* Make the audio player span the full width of songCard-2 */
+    border-radius: 8px;
+}
+#songCard-1:hover{
+    background-color: #D1B3E6;
+    cursor: pointer;
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+#songCard-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#preNextBtn {
+    display: flex;
+    gap: 10px;
+}
+
+#preBtn, #nextBtn, #addToPlaylistBtn {
+    background-color: #dcdfe8;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#preBtn:hover, #nextBtn:hover {
+    background-color: #D1B3E6;
+    transform: scale(1.1);
+}
+
+#preBtn i, #nextBtn i {
+    font-size: 18px;
+}
+
+#playlistBtn {
+    display: flex;
+    justify-content: center;
+}
+
+#addplaybtn {
+    background-color: #DFCCFB; /* Soft purple matching the existing palette */
+    border: 2px solid #F2D9FB; /* Lavender border for consistency */
+    border-radius: 25px; /* Rounded pill shape */
+    padding: 10px 30px; /* Comfortable padding */
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Makes the text stand out */
+    text-transform: uppercase; /* Converts text to uppercase */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+#addplaybtn:hover {
+    background-color: #D1B3E6; /* Slightly darker purple on hover */
+    /* Keeps text color consistent */
+    transform: translateY(-3px) scale(1.05); /* Lifted and slightly larger */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+#addplaybtn:active {
+    transform: translateY(0); /* Button returns to original position */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on click */
+}
+/* General styling for the section */
+#allSongs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 60%;
+    max-width: 600px;
+    min-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #F2D9FB; /* Light lavender background */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 20px auto;
+}
+
+/* Styling for the genre selection */
+#allSongs div label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#genreSelection {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #F0E1FF; /* Light background */
+    border: 2px solid #E1C6FB; /* Lavender border */
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#genreSelection:hover, #genreSelection:focus {
+    border-color: #C6A7E8; /* Slightly darker lavender on hover/focus */
+}
+
+/* Heading styling */
+#allSongs h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Styling for the displaySongs buttons */
+#displaySongs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.songs-Button {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #F3F8FF;
+    background-color: #1D2B53; /* Dark purple */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.songs-Button:hover {
+    background-color: #3A4A7F; /* Lighter purple on hover */
+    transform: scale(1.1);
+}
+
+/* Light mode consistency for hover effects */
+.songs-Button:focus {
+    outline: 2px solid #3A4A7F; /* Match hover border */
+    outline-offset: 3px;
+}
+
+/* Styling for the search section */
+#searchSongSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Space between input and button */
+    width: 100%; /* Full width of #allSongs */
+    padding: 10px 0; /* Vertical padding for spacing */
+}
+
+/* Styling for the search input */
+#searchSong {
+    flex: 1; /* Takes available space */
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #E1C6FB; /* Lavender border */
+    border-radius: 8px;
+    background-color: #F0E1FF; /* Light background for consistency */
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#searchSong:hover,
+#searchSong:focus {
+    border-color: #C6A7E8; /* Slightly darker lavender on hover/focus */
+}
+
+/* Styling for the search button */
+#searchbtn-1 {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #F3F8FF;
+    background-color: #1D2B53; /* Dark purple */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#searchbtn-1:hover {
+    background-color: #3A4A7F; /* Lighter purple on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+#searchbtn-1:focus {
+    outline: 2px solid #3A4A7F; /* Match hover outline */
+    outline-offset: 3px;
+}
+
+#playList {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #F2D9FB; /* Light lavender background */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-sizing: border-box;
+}
+
+#createPlaylist {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#createPlaylist input {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #E1C6FB; /* Lavender border */
+    border-radius: 8px;
+    outline: none;
+}
+
+#createPlaylist input:focus {
+    border-color: #C6A7E8; /* Slightly darker lavender on focus */
+}
+
+#createPlaylist button {
+    padding: 8px 15px;
+    font-size: 16px;
+    color: #F3F8FF;
+    background-color: #1D2B53;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#createPlaylist button:hover {
+    background-color: #3A4A7F; /* Slightly darker purple on hover */
+    transform: scale(1.05);
+}
+
+#currentPlaylist, #allPlaylist {
+    padding: 10px;
+    background-color: #F3E5FB; /* Slightly lighter lavender */
+    border: 2px solid #E1C6FB; /* Lavender border */
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#currentPlaylist h5, #allPlaylist h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1D2B53; /* Darker text for headings */
+}
+
+#searchPlaylist {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #E1C6FB; /* Lavender border */
+    border-radius: 8px;
+    outline: none;
+}
+
+#searchbtn {
+    padding: 8px 15px;
+    font-size: 16px;
+    color: #F3F8FF;
+    background-color:  #1D2B53; /* Soft purple */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#searchbtn:hover {
+    background-color: #3A4A7F; /* Slightly darker purple on hover */
+    transform: scale(1.05);
+}
+.playlist-button {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    align-items: center; /* Added for centering content inside */
+    padding: 10px; /* Optional for spacing */
+    border: 1px solid #ccc; /* Optional styling */
+    background-color: #1D2B53; /* Optional styling */
+    border-radius: 5px;
+    color:#F3F8FF ; /* Optional rounded corners */
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.playlist-button:hover {
+    background-color: #3A4A7F; /* Darker purple on hover */
+    transform: translateY(-2px); /* Slight hover effect */
+}
+
+.playlist-button:active {
+    background-color: #3A4A7F; /* Even darker purple when clicked */
+    transform: translateY(1px); /* Subtle press effect */
+}
+
